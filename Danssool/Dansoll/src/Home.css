@@ -36,24 +36,22 @@
   --transition: 0.5s cubic-bezier(0.23, 0.54, 0.6, 1.19);
 }
 
-body {
+.home-page {
   background-image: url("./assets/dansol_high.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; /* Ensure full viewport height */
+  height: 100vh;
   width: 100vw;
-  margin: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.1); /* Light transparent overlay */
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(6px);
 }
 
@@ -107,13 +105,13 @@ body {
   margin-top: var(--spacing-medium);
 }
 
-.secondary-button button {
-  width: 60.7vw; /* Twice the width of a primary button */
+ .secondary-button button {
+  width: 60.7vw;
   height: 8vh;
+  background-color: var(--dark-secondary-color);
   padding: var(--button-padding);
   border-radius: var(--button-radius);
   font-weight: var(--button-font-weight);
-  background-color: var(--dark-secondary-color);
   border: none;
   cursor: pointer;
   transition: var(--transition);
@@ -131,8 +129,8 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers everything */
-  justify-content: flex-start; /* Keeps the header at the top */
+  align-items: center; 
+  justify-content: flex-start; 
   height: 100vh;
   padding-top: var(--spacing-large);
 }
