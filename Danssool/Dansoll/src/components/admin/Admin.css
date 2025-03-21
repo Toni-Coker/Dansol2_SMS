@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: #1689cd;
+  --light-secondary-color: #f0f0f0;
+  --dark-secondary-color: #121212;
+  --muted-text-color: #50565a;
+  --background-color: #ffffff;
+  --faded: #e7e7e7;
+
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Inter Tight", sans-serif;
+
+  --font-size-small: 14px;
+  --font-size-base: 16px;
+  --font-size-large: 18px;
+  --font-size-heading: 24px;
+  --font-size-title: 32px;
+
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+
+  --border-radius: 8px;
+  --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  --button-padding: 12px 20px;
+  --button-radius: 8px;
+  --button-font-weight: 600;
+  --transition: 0.5s cubic-bezier(0.23, 0.54, 0.6, 1.19);
+}
+
+body {
+  background-color: var(--faded);
+  font-family: var(--font-primary);
+}
+
+/* Admin Layout */
+.admin-container {
+  display: flex;
+}
+
+/* Dashboard */
+.admin-dashboard {
+  margin-left: 250px;
+  padding: var(--spacing-large);
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.admin-dashboard h2 {
+  font-size: var(--font-size-title);
+  font-family: var(--font-secondary);
+  color: var(--dark-secondary-color);
+}
+
+/* Welcome Section */
+.welcome-card {
+  background: var(--primary-color);
+  color: white;
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+/* Widgets Section */
+.admin-widgets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-large);
+}
+
+.widget {
+  background-color: var(--light-secondary-color);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.widget h3 {
+  margin-bottom: var(--spacing-small);
+}
