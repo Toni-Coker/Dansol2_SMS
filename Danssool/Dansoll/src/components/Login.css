@@ -96,7 +96,8 @@ input {
   font-size: var(--font-size-base);
 }
 
-.login-button {
+
+a{
   margin-top: var(--spacing-medium);
   padding: var(--button-padding);
   border: none;
@@ -109,6 +110,19 @@ input {
   transition: var(--transition);
 }
 
-.login-button:hover{
+.login-button {
+  padding: var(--button-padding);
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: var(--button-font-weight);
+  font-size: var(--font-size-base);
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+ 
+
+a:hover{
   transform: scale(1.1);
 }
