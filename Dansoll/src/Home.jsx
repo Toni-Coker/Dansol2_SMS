@@ -1,30 +1,26 @@
-import React from 'react'
+import React from "react";
+import './Login.css'
+import {Link} from 'react-router-dom'
 
-const Home = () => {
+const Login = () => {
   return (
-    <div>
-      <section>
-        <div className="section-item">
-          <div className="img">
-            <img src=""/>
-          </div>
-          <div className="cta">
-            <h3>Log-In as Student</h3>
-            <p>View and Download Results, Access Past Questions, E-notes and many more records</p>
-          </div>
+    <div className="overlay">
+      <div className="login-container">
+        <div className="header">
+          <h1 className="heading">Log In</h1>
         </div>
-        <div className="section-item">
-          <div className="img">
-            <img src=""/>
-          </div>
-          <div className="cta">
-            <h3>Log-In as a Teacher</h3>
-            <p>View and Download Results, Access Past Questions, E-notes and many more records</p>
-          </div>
+        <div className="login-field">
+          <form>
+            <label htmlFor="school-id">School ID</label>
+            <input type="text" id="school-id" placeholder="Input ID here" />
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" placeholder="Input Password here" />
+            <Link to={"/admin"}><button className="login-button" type="submit">Log In</button></Link>
+          </form>
         </div>
-      </section>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Login;
