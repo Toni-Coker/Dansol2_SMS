@@ -10,9 +10,9 @@ import OverallStudent from "./components/accountant/OverallAccountant"
 import OverallTeacher from "./components/accountant/OverallTeacher"
 import OverallParent from "./components/accountant/OverallParent"
 import AdminLogin from "./components/admin/AdminLogin"
-import ParentLogin from "./components/admin/AdminLogin"
-import TeacherLogin from "./components/admin/AdminLogin"
-import StudentLogin from "./components/admin/AdminLogin"
+import ParentLogin from "./components/admin/ParentLogin"
+import TeacherLogin from "./components/admin/TeacherLogin"
+import StudentLogin from "./components/admin/StudentLogin"
 
 const App = () => {
   return (
