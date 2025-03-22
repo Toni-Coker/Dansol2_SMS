@@ -45,6 +45,56 @@
   font-family: var(--font-primary);
 }
 
+/* Ensure full viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Flexbox container to keep navbar and footer in place */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Keep Navbar fixed at the top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e3a8a; /* Dark blue */
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Push main content below the fixed navbar */
+.content {
+  flex: 1;
+  padding-top: 70px; /* Adjust this to match navbar height */
+  padding-bottom: 60px; /* Prevent overlap with footer */
+}
+
+/* Keep Footer fixed at the bottom */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #121212; /* Dark background */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+
 h1{
   font-size: 50px;
   font-family: var(--font-secondary);
