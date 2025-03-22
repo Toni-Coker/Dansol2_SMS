@@ -6,13 +6,13 @@ import Foot from "./Foot";
 import Login from "./components/Login";
 import Navs from "./Navs";
 import OverallAdmin from "./components/admin/OverallAdmin";
-import OverallStudent from "./components/accountant/OverallAccountant"
-import OverallTeacher from "./components/accountant/OverallTeacher"
-import OverallParent from "./components/accountant/OverallParent"
+import OverallStudent from "./components/student/OverallStudent"
+import OverallTeacher from "./components/teacher/OverallTeacher"
+import OverallParent from "./components/parent/OverallParent"
 import AdminLogin from "./components/admin/AdminLogin"
-import ParentLogin from "./components/admin/ParentLogin"
-import TeacherLogin from "./components/admin/TeacherLogin"
-import StudentLogin from "./components/admin/StudentLogin"
+import ParentLogin from "./components/parent/ParentLogin"
+import TeacherLogin from "./components/teacher/TeacherLogin"
+import StudentLogin from "./components/student/StudentLogin"
 
 const App = () => {
   return (
