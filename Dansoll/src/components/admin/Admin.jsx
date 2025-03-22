@@ -1,5 +1,4 @@
 import React from "react";
-import AdminSidebar from "./AdminSidebar";
 import "./Admin.css";
 
 const Admin = () => {

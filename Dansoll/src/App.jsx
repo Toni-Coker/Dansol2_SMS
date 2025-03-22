@@ -3,16 +3,15 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Foot from "./Foot";
-import Login from "./components/Login";
 import Navs from "./Navs";
 import OverallAdmin from "./components/admin/OverallAdmin";
-import OverallStudent from "./components/student/OverallStudent"
-import OverallTeacher from "./components/teacher/OverallTeacher"
-import OverallParent from "./components/parent/OverallParent"
-import AdminLogin from "./components/admin/AdminLogin"
-import ParentLogin from "./components/parent/ParentLogin"
-import TeacherLogin from "./components/teacher/TeacherLogin"
-import StudentLogin from "./components/student/StudentLogin"
+import OverallStudent from "./components/student/OverallStudent";
+import OverallTeacher from "./components/teacher/OverallTeacher";
+import OverallParent from "./components/parent/OverallParent";
+import AdminLogin from "./components/admin/AdminLogin";
+import ParentLogin from "./components/parent/ParentLogin";
+import TeacherLogin from "./components/teacher/TeacherLogin";
+import StudentLogin from "./components/student/StudentLogin";
 
 const App = () => {
   return (
@@ -21,17 +20,16 @@ const App = () => {
         <Navs /> {/* Navbar at the top */}
         <div className="content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} >
+              <Route path="student-login" element={<StudentLogin />}/>
+              <Route path="parent-login" element={<ParentLogin />} />
+              <Route path="teacher-login" element={<TeacherLogin />} />
+              <Route path="admin-login" element={<AdminLogin />} />
+            </Route>
             <Route path="/admin" element={<OverallAdmin />} />
             <Route path="/student" element={<OverallStudent />} />
             <Route path="/teacher" element={<OverallTeacher />} />
             <Route path="/parent" element={<OverallParent />} />
-            <Route path="/login" element={<Login />}>
-              <Route path="student" element={<StudentLogin />} />
-              <Route path="parent" element={<ParentLogin />} />
-              <Route path="teacher" element={<TeacherLogin/>} />
-              <Route path="admin" element={<AdminLogin />} />
-            </Route>
           </Routes>
         </div>
         <Foot /> {/* Footer at the bottom */}
