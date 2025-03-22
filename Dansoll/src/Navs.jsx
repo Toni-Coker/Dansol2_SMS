@@ -5,7 +5,6 @@ import dansol from './assets/dansol_logo-removebg-preview.png'
 const Navs = () => {
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="logo">
         <img src={dansol} alt="Dansol Logo" />
       </div>
