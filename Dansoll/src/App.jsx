@@ -5,8 +5,8 @@ import Home from "./Home";
 import ErrorPage from "./ErrorPage";
 import Foot from "./Foot";
 import Login from "./components/Login";
-import Admin from "./components/admin/Admin";
 import Navs from "./Navs";
+import OverallAdmin from "./components/admin/OverallAdmin";
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin" element={<OverallAdmin />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

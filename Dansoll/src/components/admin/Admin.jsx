@@ -5,18 +5,11 @@ import "./Admin.css";
 const Admin = () => {
   return (
     <div className="admin-container">
-      {/* Sidebar */}
-      <AdminSidebar />
-
-      {/* Main Dashboard Content */}
       <div className="admin-dashboard">
-        {/* Welcome Section */}
         <div className="welcome-card">
           <h2>Welcome back, Admin</h2>
           <p>Manage students, teachers, and school operations efficiently.</p>
         </div>
-
-        {/* Widgets Section */}
         <div className="admin-widgets">
           <div className="widget">
             <h3>Manage Students</h3>
