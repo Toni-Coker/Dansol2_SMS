@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OverallAccountant = () => {
+const ParentLogin = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const OverallAccountant = () => {
   )
 }
 
-export default OverallAccountant
+export default ParentLogin

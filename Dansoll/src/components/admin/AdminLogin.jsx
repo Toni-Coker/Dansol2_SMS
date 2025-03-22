@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AccountantSidebar = () => {
+const AdminLogin = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const AccountantSidebar = () => {
   )
 }
 
-export default AccountantSidebar
+export default AdminLogin

@@ -6,8 +6,13 @@ import Foot from "./Foot";
 import Login from "./components/Login";
 import Navs from "./Navs";
 import OverallAdmin from "./components/admin/OverallAdmin";
-import OverallAccountant from "./components/accountant/OverallAccountant"
-
+import OverallStudent from "./components/accountant/OverallAccountant"
+import OverallTeacher from "./components/accountant/OverallTeacher"
+import OverallParent from "./components/accountant/OverallParent"
+import AdminLogin from "./components/admin/AdminLogin"
+import ParentLogin from "./components/admin/AdminLogin"
+import TeacherLogin from "./components/admin/AdminLogin"
+import StudentLogin from "./components/admin/AdminLogin"
 
 const App = () => {
   return (
@@ -18,16 +23,14 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<OverallAdmin />} />
-            <Route path="/accountant" element={<OverallAccountant />} />
-            <Route path="/student" element={<OverallAdmin />} />
-            <Route path="/teacher" element={<OverallAdmin />} />
-            <Route path="/parent" element={<OverallAdmin />} />
+            <Route path="/student" element={<OverallStudent />} />
+            <Route path="/teacher" element={<OverallTeacher />} />
+            <Route path="/parent" element={<OverallParent />} />
             <Route path="/login" element={<Login />}>
-              <Route path="student" element={<Upcoming />} />
-              <Route path="parent" element={<Popular />} />
-              <Route path="staff" element={<Upcoming />} />
-              <Route path="accountant" element={<Upcoming />} />
-              <Route path="admin" element={<Popular />} />
+              <Route path="student" element={<StudentLogin />} />
+              <Route path="parent" element={<ParentLogin />} />
+              <Route path="teacher" element={<TeacherLogin/>} />
+              <Route path="admin" element={<AdminLogin />} />
             </Route>
           </Routes>
         </div>
