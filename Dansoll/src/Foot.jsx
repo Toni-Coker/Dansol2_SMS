@@ -20,22 +20,38 @@ const Foot = () => {
         <div className="socials">
           <ul>
             <li>
-              <Link to={"https://www.instagram.com/dansolschools/"} target="_blank" rel="noopener noreferrer">
+              <Link
+                to={"https://www.instagram.com/dansolschools/"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram size={35} />
               </Link>
             </li>
             <li>
-              <Link to={"https://web.facebook.com/dansolschools/"} target="_blank" rel="noopener noreferrer">
-                <FaFacebookSquare size={35}/>
+              <Link
+                to={"https://web.facebook.com/dansolschools/"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookSquare size={35} />
               </Link>
             </li>
             <li>
-              <Link to={"https://www.youtube.com/@dansolschools1989"} target="_blank" rel="noopener noreferrer">
-                <FaYoutube size={35}/>
+              <Link
+                to={"https://www.youtube.com/@dansolschools1989"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube size={35} />
               </Link>
             </li>
             <li>
-              <Link to={"https://dansolschools.com"} target="_blank" rel="noopener noreferrer">
+              <Link
+                to={"https://dansolschools.com"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <TbWorldWww size={35} />
               </Link>
             </li>
