@@ -24,7 +24,7 @@
   --spacing-large: 2rem;
 
   /* 🖼 Borders & Shadows */
-  --border-radius: 8px;
+  --border-radius: 1rem;
   --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
   /* Button */
