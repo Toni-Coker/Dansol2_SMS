@@ -1,0 +1,10 @@
+body{
+    background: url("../assets/dansol_high.jpg");
+    background-size: cover;
+}
+nav{
+    border-radius: 0 !important;
+}
+.sidebar{
+    border-radius: 0 !important;
+}
