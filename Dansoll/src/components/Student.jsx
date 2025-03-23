@@ -1,9 +1,10 @@
-import React from "react";
-import "./Admin.css";
+import React from 'react'
+import './Student.css'
 
-const Admin = () => {
+const Student = () => {
   return (
-    <div className="admin-container">
+    <div>
+        <div className="admin-container">
       <div className="admin-dashboard">
         <div className="welcome-card">
           <h2>Welcome back, Admin</h2>
@@ -25,7 +26,8 @@ const Admin = () => {
         </div>
       </div>
     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default Admin;
+export default Student

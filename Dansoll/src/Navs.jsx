@@ -10,7 +10,7 @@ const Navs = () => {
       </div>
 
       {/* Title */}
-      <h1 className="title">Dansol High School App</h1>
+      <h1 className="title">Dansol High Student Hub</h1>
     </nav>
   );
 };
