@@ -30,4 +30,5 @@
   transform: translateX(-50%);
   white-space: nowrap; /* Prevents text from wrapping */
   cursor: pointer;
+  color: var(--dark-secondary-color);
 }

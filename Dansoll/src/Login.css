@@ -40,6 +40,7 @@ body {
 .header {
   text-align: left;
   margin-bottom: var(--spacing-medium);
+  cursor: default;
 }
 
 .heading {
@@ -79,5 +80,5 @@ body {
 }
 
 .login-button:hover {
-  background-color: var(--dark-secondary-color);
+  transform: scale(1.1);
 }

@@ -24,7 +24,7 @@ const Login = () => {
                 id="password"
                 placeholder="Input Password here"
               />
-              <Link to={"/student"}>
+              <Link to={"/dashboard"}>
                 <button className="login-button" type="submit">
                   Log In
                 </button>

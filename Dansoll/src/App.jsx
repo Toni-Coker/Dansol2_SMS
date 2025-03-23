@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Navs from "./Navs";
 import Login from "./Login";
+import Dashboard from './components/Dashboard'
 
 const App = () => {
   return (
@@ -14,6 +15,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />}>
+
+            </Route>
           </Routes>
         </div>
       </Router>
