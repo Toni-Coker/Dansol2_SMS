@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import "./Home.css"; // Home page styling
-import './App.css'
 
 const Home = () => {
   const navigate = useNavigate();
