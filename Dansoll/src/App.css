@@ -73,13 +73,6 @@ html, body {
   z-index: 1000;
 }
 
-/* Push main content below the fixed navbar */
-.content {
-  flex: 1;
-  padding-top: 70px; /* Adjust this to match navbar height */
-  padding-bottom: 60px; /* Prevent overlap with footer */
-}
-
 h1{
   font-size: 50px;
   font-family: var(--font-secondary);
