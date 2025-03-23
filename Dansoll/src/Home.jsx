@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import "./Home.css"; // Home page styling
+import './App.css'
 
 const Home = () => {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ const Home = () => {
             {["Student", "Parent", "Teacher", "Admin"].map((role, index) => (
               <Link to={`/${role.toLowerCase()}-login`} key={index} style={{ textDecoration: "none" }}>
                 <button
-                  style={{ backgroundColor: activeIndex === index ? "black" : "" }}
+                  style={{ backgroundColor: activeIndex === index ? "#121212" : "" }}
                   onClick={() => setActiveIndex(index)}
                 >
                   {role}
