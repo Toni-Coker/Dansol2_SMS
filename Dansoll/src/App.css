@@ -80,21 +80,6 @@ html, body {
   padding-bottom: 60px; /* Prevent overlap with footer */
 }
 
-/* Keep Footer fixed at the bottom */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #121212; /* Dark background */
-  color: white;
-  text-align: center;
-  padding: 10px;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-
 h1{
   font-size: 50px;
   font-family: var(--font-secondary);

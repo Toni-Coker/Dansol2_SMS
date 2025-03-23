@@ -1,52 +1,52 @@
-import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import "./home.css"; // Home page styling
 
 const Home = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const loginPaths = ["/student-login", "/parent-login", "/teacher-login", "/admin-login"];
+
+  // Get active index from localStorage or default to 0 (Student)
+  const [activeIndex, setActiveIndex] = useState(() => {
+    return localStorage.getItem("activeIndex") ? Number(localStorage.getItem("activeIndex")) : 0;
+  });
+
+  // Redirect to Student Login only on first load if not on any login page
+  useEffect(() => {
+    if (!loginPaths.includes(location.pathname)) {
+      navigate("/student-login", { replace: true });
+      setActiveIndex(0);
+    }
+  }, [location.pathname, navigate]);
+
+  // Save activeIndex to localStorage when it changes
+  useEffect(() => {
+    localStorage.setItem("activeIndex", activeIndex);
+  }, [activeIndex]);
 
   return (
-    <div className="home">
-      <section className="hero">
-        <h1>Log In to see your dashboard</h1>
-        <div className="btn-field">
-          <Link to="/student-login" style={{ textDecoration: "none" }}>
-            <button
-              style={{ backgroundColor: activeIndex === 0 ? "black" : "" }}
-              onClick={() => setActiveIndex(0)}
-            >
-              Student
-            </button>
-          </Link>
-          <Link to="/parent-login" style={{ textDecoration: "none" }}>
-            <button
-              style={{ backgroundColor: activeIndex === 1 ? "black" : "" }}
-              onClick={() => setActiveIndex(1)}
-            >
-              Parent
-            </button>
-          </Link>
-          <Link to="/teacher-login" style={{ textDecoration: "none" }}>
-            <button
-              style={{ backgroundColor: activeIndex === 2 ? "black" : "" }}
-              onClick={() => setActiveIndex(2)}
-            >
-              Teacher
-            </button>
-          </Link>
-          <Link to="/admin-login" style={{ textDecoration: "none" }}>
-            <button
-              style={{ backgroundColor: activeIndex === 3 ? "black" : "" }}
-              onClick={() => setActiveIndex(3)}
-            >
-              Admin
-            </button>
-          </Link>
-        </div>
-      </section>
-      <section className="login-field">
-        <Outlet />
-      </section>
+    <div>
+      <div className="home">
+        <section className="hero">
+          <h1>Log In to see your dashboard</h1>
+          <div className="btn-field">
+            {["Student", "Parent", "Teacher", "Admin"].map((role, index) => (
+              <Link to={`/${role.toLowerCase()}-login`} key={index} style={{ textDecoration: "none" }}>
+                <button
+                  style={{ backgroundColor: activeIndex === index ? "black" : "" }}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  {role}
+                </button>
+              </Link>
+            ))}
+          </div>
+        </section>
+        <section className="login-field">
+          <Outlet />
+        </section>
+      </div>
     </div>
   );
 };

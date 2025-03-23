@@ -20,7 +20,7 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} >
-              <Route path="student-login" element={<StudentLogin />}/>
+              <Route index path="student-login" element={<StudentLogin />}/>
               <Route path="parent-login" element={<ParentLogin />} />
               <Route path="teacher-login" element={<TeacherLogin />} />
               <Route path="admin-login" element={<AdminLogin />} />
