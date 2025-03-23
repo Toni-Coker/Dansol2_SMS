@@ -47,8 +47,10 @@ body {
 
 .heading {
   margin: 0;
-  font-size: var(--font-size-heading);
-  font-family: var(--font-primary);
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 600;
+  font-family: var(--font-secondary);
   color: var(--primary-color);
 }
 
