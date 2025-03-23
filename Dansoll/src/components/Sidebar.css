@@ -31,7 +31,6 @@
   padding: var(--spacing-medium);
   color: var(--dark-secondary-color);
   text-decoration: none;
-  transition: background-color var(--transition), color var(--transition);
 }
 
 /* Hover & active states */
