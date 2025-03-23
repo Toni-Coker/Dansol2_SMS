@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import Foot from "./Foot";
 import Navs from "./Navs";
 import OverallAdmin from "./components/admin/OverallAdmin";
 import OverallStudent from "./components/student/OverallStudent";
@@ -32,7 +31,6 @@ const App = () => {
             <Route path="/parent" element={<OverallParent />} />
           </Routes>
         </div>
-        <Foot /> {/* Footer at the bottom */}
       </Router>
     </div>
   );

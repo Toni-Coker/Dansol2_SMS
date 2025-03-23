@@ -1,0 +1,54 @@
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centered header styling */
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  margin: 0;
+  font-size: var(--font-size-heading);
+  font-family: var(--font-primary);
+  color: var(--primary-color);
+}
+
+/* Styling for the form fields */
+.login-field form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-field label {
+  font-weight: 600;
+  color: var(--dark-secondary-color);
+}
+
+.login-field input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styling for the login button */
+.login-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: black;
+}

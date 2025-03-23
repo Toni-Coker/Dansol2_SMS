@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './TeacherLogin.css'
 
 const TeacherLogin = () => {
   return (
@@ -10,8 +11,8 @@ const TeacherLogin = () => {
           </div>
           <div className="login-field">
             <form>
-              <label htmlFor="school-id">School ID</label>
-              <input type="text" id="school-id" placeholder="Input ID here" />
+              <label htmlFor="school-id">Teacher ID</label>
+              <input type="text" id="school-id" placeholder="Input Teacher ID here" />
               <label htmlFor="password">Password</label>
               <input
                 type="password"
