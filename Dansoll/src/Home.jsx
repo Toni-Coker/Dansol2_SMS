@@ -1,7 +1,7 @@
 import React from "react";
 import hero from "./assets/hero-image.jpg";
 import results from "./assets/results.jpg";
-import enotes from "./assets/enotes.webp";
+import enotes from "./assets/Enotes.webp";
 import ai from "./assets/AI.webp";
 import { Link } from "react-router-dom";
 import "./Home.css";
