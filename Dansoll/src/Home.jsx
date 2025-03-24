@@ -1,49 +1,48 @@
 import React from "react";
-import hero from './assets/hero-image.jpg'
-import './Home.css'
+import hero from "./assets/hero-image.jpg";
+import results from "./assets/results.jpg";
+import enotes from "./assets/enotes.webp";
+import ai from "./assets/AI.webp";
+import { Link } from "react-router-dom";
+import "./Home.css";
 
 const Home = () => {
   return (
     <div>
       <section className="section">
-        <div className="hero">
+        <div className="hero" id="right">
           <div className="img">
-            <img src={hero} alt="Student Hub" />
+            <img src={hero} alt="Student using the Hub" />
           </div>
           <div className="text">
-            <h1>
-              Unlock your full academic potential with the new Dansol High
-              School Student Hub
-            </h1>
+            <h1>Unlock Your Full Academic Potential</h1>
             <p>
-              A platform designed to provide seamless access to educational
+              Dansol High School Student Hub provides seamless access to educational
               materials, performance tracking, and AI-powered assistance.
             </p>
-            <button>Get Started</button>
+            <Link to={'/login'} ><button className="login">Get Started</button></Link>
           </div>
         </div>
 
-        {/* Access to E-Notes and Past Questions */}
-        <div className="hero">
+        <div className="hero" id="left">
           <div className="text">
-            <h1>Access E-Notes and Past Questions Anytime</h1>
+            <h1>Access E-Notes and Past Questions</h1>
             <p>
               Gain unlimited access to a vast collection of e-notes and past
               exam questions to enhance your learning and preparation for exams.
             </p>
           </div>
           <div className="img">
-            <img src="" alt="E-Notes and Past Questions" />
+            <img src={enotes} alt="E-Notes and Past Questions Access" />
           </div>
         </div>
 
-        {/* Result Analysis Section */}
-        <div className="hero">
+        <div className="hero" id="right">
           <div className="img">
-            <img src="" alt="Result Analysis" />
+            <img src={results} alt="Student Checking Results" />
           </div>
           <div className="text">
-            <h1>Detailed Result Analysis to Track Your Progress</h1>
+            <h1>Detailed Result Analysis</h1>
             <p>
               View in-depth analysis of your academic performance, identify weak
               points, and take steps to improve your grades effectively.
@@ -51,17 +50,16 @@ const Home = () => {
           </div>
         </div>
 
-        {/* AI Chatbot Section */}
-        <div className="hero">
+        <div className="hero" id="left">
           <div className="text">
-            <h1>Get Assistance from Our AI Chatbot</h1>
+            <h1>AI-Powered Assistance</h1>
             <p>
               Need help with your studies? Our AI chatbot is here to provide
               instant answers, explanations, and guidance for all subjects.
             </p>
           </div>
           <div className="img">
-            <img src="" alt="AI Chatbot" />
+            <img src={ai} alt="AI Chatbot for Learning Assistance" />
           </div>
         </div>
       </section>

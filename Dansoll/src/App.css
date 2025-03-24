@@ -33,7 +33,7 @@
   --button-font-weight: 600;
 
   /* Transitions */
-  --transition: 0.5s cubic-bezier(0.23, 0.54, 0.6, 1.19);
+  --transition: all 0.5s cubic-bezier(0.23, 0.54, 0.6, 1.19);
 }
 
 * {
@@ -42,7 +42,7 @@
   box-sizing: border-box;
   font-family: var(--font-primary);
 	font-weight: 400;
-	transition: all 0.5s cubic-bezier(0.57, -0.01, 0.21, 0.89);
+	transition: var(--transition);
 	text-decoration: none;
 }
 /* Ensure full viewport height */
@@ -53,24 +53,18 @@ html, body {
   overflow-x: hidden;
 }
 
+body{
+  background: url("./assets/dansol_high.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:repeat-y;
+}
+
 /* Flexbox container to keep navbar and footer in place */
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-/* Keep Navbar fixed at the top */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #1e3a8a; /* Dark blue */
-  color: white;
-  padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
 }
 
 h1{

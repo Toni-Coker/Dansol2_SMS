@@ -3,13 +3,10 @@
   color: var(--dark-secondary-color);
   display: flex;
   align-items: center;
-  position: sticky;
+  justify-content: space-between; /* Distributes items properly */
   padding: 15px 20px;
-  position: relative; /* Ensures absolute positioning inside */
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(209, 213, 219, 0.3);
+  position: sticky;
+  width: 100%;
 }
 
 /* Logo styling */
@@ -19,7 +16,7 @@
   cursor: pointer;
 }
 
-.logo img:hover{
+.logo img:hover {
   transform: scale(1.1);
 }
 
@@ -33,4 +30,23 @@
   white-space: nowrap; /* Prevents text from wrapping */
   cursor: pointer;
   color: var(--dark-secondary-color);
+}
+
+/* Button container */
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn button {
+  background-color: var(--primary-color);
+  color: var(--light-secondary-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn button:hover {
+  transform: scale(1.05);
 }
