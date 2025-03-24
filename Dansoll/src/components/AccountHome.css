@@ -1,0 +1,45 @@
+.account-container {
+  width: 100vw;
+  padding: var(--spacing-large);
+  background: var(--light-secondary-color);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+}
+
+.account-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-title);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-medium);
+}
+
+.account-icon {
+  font-size: 40px;
+  margin-right: 10px;
+  color: var(--dark-secondary-color);
+}
+
+.account-details p {
+  font-size: var(--font-size-base);
+  color: var(--dark-secondary-color);
+  margin: 10px 0;
+}
+
+.logout-btn {
+  background-color: var(--primary-color);
+  color: var(--light-secondary-color);
+  padding: var(--button-padding);
+  border-radius: var(--button-radius);
+  border: none;
+  cursor: pointer;
+  margin-top: var(--spacing-medium);
+}
+
+.logout-btn:hover {
+  transform: scale(1.1);
+}

@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between; /* Distributes items properly */
   padding: 15px 20px;
-  position:static;
+  position:sticky;
   width: 100%;
 }
 
