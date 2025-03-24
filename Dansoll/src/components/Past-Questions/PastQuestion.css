@@ -17,6 +17,10 @@
   margin-bottom: var(--spacing-large);
 }
 
+.session h2{
+  color: var(--dark-secondary-color);
+}
+
 .class-buttons,
 .term-buttons {
   display: flex;
