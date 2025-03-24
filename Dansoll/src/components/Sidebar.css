@@ -5,7 +5,6 @@
   color: var(--dark-secondary-color);
   height: calc(100vh - 2rem);
   position: relative;
-  margin: 1rem;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.75);
@@ -95,9 +94,9 @@
   margin-left: 0;
 }
 
-.sidebar-header{
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    padding: var(--spacing-medium);
+.sidebar-header {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding: var(--spacing-medium);
 }

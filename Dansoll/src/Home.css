@@ -1,7 +1,3 @@
-.section{
-    overflow-y: scroll;
-}
-
 .hero {
   display: flex;
   align-items: center;
