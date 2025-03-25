@@ -7,7 +7,7 @@ import Login from "./Login";
 import Dashboard from "./components/Dashboard";
 import AccountHome from "./components/Account/AccountHome";
 import PastQuestions from "./components/Past-Questions/PastQuestion";
-import Enotes from "./components/Enotes/Enotes";
+import Enotes from "./components/E-Notes/Enotes";
 
 const App = () => {
   return (
