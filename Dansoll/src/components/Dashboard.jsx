@@ -23,7 +23,7 @@ const Dashboard = () => {
     { name: "E-Notes", path: "/dashboard/e-notes", icon: <FaBook /> },
     { name: "AI ChatBot", path: "/dashboard/chatbot", icon: <FaRobot /> },
     { name: "Account", path: "/dashboard/account", icon: <MdAccountCircle /> },
-    { name: "Log Out", path: "/dashboard/logout", icon: <MdLogout /> },
+    { name: "Log Out", path: "/login", icon: <MdLogout /> },
   ];
 
   const toggleSidebar = () => {

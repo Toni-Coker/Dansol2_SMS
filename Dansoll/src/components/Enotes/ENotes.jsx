@@ -10,7 +10,7 @@ const eNotesLinks = {
   SS2: "https://bit.ly/ss2enote",
 };
 
-const ENotes = () => {
+const Enotes = () => {
   return (
     <div className="enotes-container">
       <h1>E-Notes</h1>
@@ -25,4 +25,4 @@ const ENotes = () => {
   );
 };
 
-export default ENotes;
+export default Enotes;
