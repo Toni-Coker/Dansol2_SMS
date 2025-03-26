@@ -6,16 +6,11 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 
-// ✅ Use Express CORS Middleware PROPERLY
-const allowedOrigins = [
-    "https://dansol-student-hub.vercel.app"
-];
-
 app.use(
   cors({
-    origin: allowedOrigins, // Allow specific frontend origins
+    origin: ["http://localhost:5173/"],
     methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type"]
+    allowedHeaders: ["Content-Type", "Access-Control-Allow-Origin"],
   })
 );
 
@@ -33,7 +28,7 @@ app.post("/chat", async (req, res) => {
     }
 
     const response = await axios.post(API_URL, {
-      contents: [{ parts: [{ text: message }] }]
+      contents: [{ parts: [{ text: message }] }],
     });
 
     const aiResponse =
