@@ -8,6 +8,7 @@ import Dashboard from "./components/Dashboard";
 import AccountHome from "./components/Account/AccountHome";
 import PastQuestions from "./components/Past-Questions/PastQuestion";
 import Enotes from "./components/E-Notes/Enotes";
+import Chat from "./components/Chatbot/Chat";
 
 const App = () => {
   return (
@@ -19,10 +20,10 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />}>
-              <Route path="results" element={<Login />} />
+              <Route path="results" element={<Dashboard />} />
               <Route path="past-questions" element={<PastQuestions />} />
               <Route path="e-notes" element={<Enotes />} />
-              <Route path="chatbot" element={<Login />} />
+              <Route path="chatbot" element={<Chat />} />
               <Route path="account" element={<AccountHome />} />
             </Route>
             <Route path="logout" element={<Login />} />
