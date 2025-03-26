@@ -1,16 +1,21 @@
 // server.js (Reverting to last known working version for your device)
 import "dotenv/config";
 import express from "express";
-import axios from "axios";
 import cors from "cors";
-const allowedOrigins = ["http://localhost:5173", "https://dansol-student-hub.vercel.app"];
-app.use(cors({ origin: allowedOrigins, methods: ["GET", "POST"] }));
-
+import axios from "axios";
 
 const app = express();
 app.use(express.json());
 
 // CORS setup (only for your device)
+const allowedOrigins = ["http://localhost:5173"];
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
