@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Home";
 import Navs from "./Navs";
 import Login from "./Login";
@@ -11,27 +11,36 @@ import Enotes from "./components/E-Notes/Enotes";
 import Chat from "./components/Chatbot/Chat";
 
 const App = () => {
+  const location = useLocation(); // Get the current route
+
   return (
     <div className="app-container">
-      <Router>
-        <Navs /> {/* Navbar at the top */}
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />}>
-              <Route path="results" element={<Dashboard />} />
-              <Route path="past-questions" element={<PastQuestions />} />
-              <Route path="e-notes" element={<Enotes />} />
-              <Route path="chatbot" element={<Chat />} />
-              <Route path="account" element={<AccountHome />} />
-            </Route>
-            <Route path="logout" element={<Login />} />
-          </Routes>
-        </div>
-      </Router>
+      {/* Conditionally render Navs except on the home page */}
+      {location.pathname !== "/" && <Navs />} 
+      
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="results" element={<Dashboard />} />
+            <Route path="past-questions" element={<PastQuestions />} />
+            <Route path="e-notes" element={<Enotes />} />
+            <Route path="chatbot" element={<Chat />} />
+            <Route path="account" element={<AccountHome />} />
+          </Route>
+          <Route path="logout" element={<Login />} />
+        </Routes>
+      </div>
     </div>
   );
 };
 
-export default App;
+// Wrap App with Router to provide routing context
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWrapper;

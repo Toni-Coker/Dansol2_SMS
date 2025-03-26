@@ -5,10 +5,12 @@ import enotes from "./assets/Enotes.webp";
 import ai from "./assets/AI.webp";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Hero from "./components/Hero";
 
 const Home = () => {
   return (
     <div>
+      <Hero />
       <section className="section">
         <div className="hero" id="right">
           <div className="img">
