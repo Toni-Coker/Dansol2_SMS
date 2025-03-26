@@ -1,3 +1,4 @@
+// server.js (Reverting to last known working version for your device)
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
@@ -6,16 +7,15 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 
+// CORS setup (only for your device)
+const allowedOrigins = ["http://localhost:5173"];
 app.use(
   cors({
-    origin: ["http://localhost:5173/"],
-    methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Access-Control-Allow-Origin"],
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
   })
 );
-
-// ✅ Handle Preflight Requests (Better Solution)
-app.options("*", cors());
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
@@ -45,6 +45,5 @@ app.post("/chat", async (req, res) => {
   }
 });
 
-// ✅ Use a dynamic port for Vercel
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
