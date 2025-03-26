@@ -6,25 +6,16 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 
-// ✅ Explicitly allow requests from your frontend URL
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://dansol-student-hub", // ✅ Your deployed frontend
-];
-
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
+// ✅ Fix CORS issues
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins (for testing)
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200); // Handle preflight requests
+  }
+  next();
+});
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
@@ -54,6 +45,6 @@ app.post("/chat", async (req, res) => {
   }
 });
 
-// ✅ Use a dynamic port for deployment
+// ✅ Use a dynamic port for Vercel
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
