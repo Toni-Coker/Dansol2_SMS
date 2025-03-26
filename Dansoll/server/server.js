@@ -6,16 +6,22 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 
-// ✅ Fix CORS issues
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:5173/"); // Allow all origins (for testing)
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  if (req.method === "OPTIONS") {
-    return res.sendStatus(200); // Handle preflight requests
-  }
-  next();
-});
+// ✅ Use Express CORS Middleware PROPERLY
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://dansol-student-hub.vercel.app"
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins, // Allow specific frontend origins
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+  })
+);
+
+// ✅ Handle Preflight Requests (Better Solution)
+app.options("*", cors());
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
@@ -28,7 +34,7 @@ app.post("/chat", async (req, res) => {
     }
 
     const response = await axios.post(API_URL, {
-      contents: [{ parts: [{ text: message }] }],
+      contents: [{ parts: [{ text: message }] }]
     });
 
     const aiResponse =
