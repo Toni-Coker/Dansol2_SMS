@@ -8,15 +8,14 @@ app.use(express.json());
 
 // ✅ Use Express CORS Middleware PROPERLY
 const allowedOrigins = [
-  "http://localhost:5173",
-  "https://dansol-student-hub.vercel.app"
+    "https://dansol-student-hub.vercel.app"
 ];
 
 app.use(
   cors({
     origin: allowedOrigins, // Allow specific frontend origins
     methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
+    allowedHeaders: ["Content-Type"]
   })
 );
 
