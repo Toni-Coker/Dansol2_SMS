@@ -11,12 +11,6 @@ const Navs = () => {
       </div>
 
       <h1 className="title">Dansol High Student Hub</h1>
-
-      <div className="btn">
-        <Link to={'/login'}>
-          <button>Log In</button>
-        </Link>
-      </div>
     </nav>
   );
 };
