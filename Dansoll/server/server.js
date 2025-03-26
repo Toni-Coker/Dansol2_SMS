@@ -9,7 +9,7 @@ app.use(express.json());
 // ✅ Explicitly allow requests from your frontend URL
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://dansolhub.vercel.app", // ✅ Your deployed frontend
+  "https://dansol-student-hub", // ✅ Your deployed frontend
 ];
 
 app.use(
