@@ -8,7 +8,7 @@ app.use(express.json());
 
 // ✅ Fix CORS issues
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Allow all origins (for testing)
+  res.header("Access-Control-Allow-Origin", "http://localhost:5173/"); // Allow all origins (for testing)
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   if (req.method === "OPTIONS") {
