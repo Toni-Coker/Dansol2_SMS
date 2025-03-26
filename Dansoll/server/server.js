@@ -6,21 +6,21 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 
-// ✅ Dynamic CORS for frontend
+// ✅ Explicitly allow requests from your frontend URL
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://dansolhub.vercel.app", // ✅ Your deployed frontend
+];
+
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (
-        !origin ||
-        origin.includes("localhost") ||
-        origin.includes("vercel.app")
-      ) {
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
       }
     },
-    credentials: true,
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
@@ -54,6 +54,6 @@ app.post("/chat", async (req, res) => {
   }
 });
 
-// ✅ Use Vercel Port
+// ✅ Use a dynamic port for deployment
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

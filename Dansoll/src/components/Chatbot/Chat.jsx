@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./Chat.css";
 
-const API_URL = import.meta.env.VITE_BACKEND_URL;
+const APIS_URL = import.meta.env.VITE_API_URL;
 
 const Chat = () => {
   const [message, setMessage] = useState("");
@@ -16,7 +16,7 @@ const Chat = () => {
     setMessage("");
 
     try {
-      const res = await axios.post(`${API_URL}/chat`, { message });
+      const res = await axios.post(`${APIS_URL}/chat`, { message });
 
       const aiReply = res.data.response || "No response";
       setMessages([...newMessages, { text: aiReply, sender: "ai" }]);
@@ -26,11 +26,16 @@ const Chat = () => {
     }
   };
 
+  // console.log("APIS_URL from .env:", import.meta.env.VITE_API_URL);
+
   return (
     <div className="chat-container">
       <div className="chat-messages">
         {messages.map((msg, index) => (
-          <div key={index} className={msg.sender === "user" ? "user-message" : "ai-message"}>
+          <div
+            key={index}
+            className={msg.sender === "user" ? "user-message" : "ai-message"} // ✅ Fix: Use className
+          >
             {msg.text}
           </div>
         ))}
