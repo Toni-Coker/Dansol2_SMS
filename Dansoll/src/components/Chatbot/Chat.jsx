@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./Chat.css";
 
-const APIS_URL = import.meta.env.VITE_API_URL;
+const APIS_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Chat = () => {
   const [message, setMessage] = useState("");
