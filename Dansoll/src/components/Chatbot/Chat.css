@@ -36,12 +36,31 @@
   flex-direction: column;
 }
 
-.user-message, .ai-message {
+.user-message,
+.ai-message {
   padding: var(--spacing-medium);
   margin: var(--spacing-small) 0;
   border-radius: var(--border-radius);
   max-width: 75%;
   word-wrap: break-word;
+  font-size: var(
+    --font-size-base
+  ); /* Ensure both messages use the same font size */
+}
+
+.ai-message {
+  background: #12121240;
+  align-self: flex-start;
+  text-align: left;
+  font-size: var(--font-size-base); /* Ensure same font size */
+}
+
+.ai-message * {
+  /* Override Markdown-generated elements */
+  font-size: inherit !important;
+  line-height: 1.5; /* Adjust for readability */
+  margin: 0;
+  padding: 0;
 }
 
 .user-message {
@@ -86,7 +105,7 @@
   font-size: var(--font-size-base);
   outline: none;
 }
-::placeholder{
+::placeholder {
   color: white;
 }
 .input-container button {
@@ -110,4 +129,3 @@
   background: #7faecc;
   cursor: not-allowed;
 }
-
