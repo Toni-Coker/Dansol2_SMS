@@ -49,7 +49,7 @@ const Chat = () => {
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Ask AI..."
         />
-        <button onClick={sendMessage} disabled={!message.trim()}>Send</button>
+        <button className="name" onClick={sendMessage} disabled={!message.trim()}>Send</button>
       </div>
     </div>
   );
