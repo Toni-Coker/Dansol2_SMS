@@ -7,12 +7,6 @@ import { MdAccountCircle} from "react-icons/md";
 const DashBoardd = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [collapsed, setCollapsed] = useState(false);
-
-  const handleLogout = () => {
-    localStorage.removeItem("user"); // Clear user data
-    navigate("/login"); // Redirect to login page
-  };
 
   const menuItems = [
     {
@@ -28,9 +22,9 @@ const DashBoardd = () => {
 
   return (
     <div className="general">
-      <div className={`sidebar ${collapsed ? "collapsed" : ""}`}>
+      <div className="sidebar">
         <div className="sidebar-header">
-          {!collapsed && <h2 className="sidebar-title">Student Hub</h2>}
+          <h2 className="sidebar-title">Student Hub</h2>
 
         </div>
         <ul className="sidebar-menu">
@@ -44,7 +38,8 @@ const DashBoardd = () => {
             >
               <Link to={item.path}>
                 <div className="icon">{item.icon}</div>
-                {!collapsed && <span className="menu-text">{item.name}</span>}
+                <span className="menu-text">{item.name}</span>
+                
               </Link>
             </li>
           ))}

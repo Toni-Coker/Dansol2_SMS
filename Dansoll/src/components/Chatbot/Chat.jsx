@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import ReactMarkdown from "react-markdown"; // Import Markdown Renderer
 import "./Chat.css";
 
 const API_URL = "http://localhost:5000";
@@ -33,7 +34,11 @@ const Chat = () => {
             key={index}
             className={msg.sender === "user" ? "user-message" : "ai-message"}
           >
-            {msg.text}
+            {msg.sender === "ai" ? (
+              <ReactMarkdown>{msg.text}</ReactMarkdown> // Render AI messages as Markdown
+            ) : (
+              msg.text
+            )}
           </div>
         ))}
       </div>
