@@ -8,13 +8,13 @@ const app = express();
 app.use(express.json());
 
 // CORS setup (only for your device)
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["http://localhost:5173", "https://dansol-student-hub.vercel.app"];
 app.use(
-  cors({
-    origin: allowedOrigins,
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"],
-  })
+cors({
+origin: allowedOrigins,
+methods: ["GET", "POST"],
+allowedHeaders: ["Content-Type"],
+})
 );
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
