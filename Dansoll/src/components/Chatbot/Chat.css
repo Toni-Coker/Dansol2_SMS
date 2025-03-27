@@ -3,13 +3,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  max-width: 600px;
-  max-height: 80vh;
-  min-height: fit-content;
-  margin-top: 2rem;
-  margin: 6rem;
-  margin-left: 19vw;
+  width: 40vw;
+  margin: auto;
+  height: 60vh;
   padding: var(--spacing-medium);
   border-radius: var(--border-radius);
   background: linear-gradient(90deg, #1689cd80, #12121280);

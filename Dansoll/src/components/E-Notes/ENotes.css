@@ -14,7 +14,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  width: 60vw;
+  margin: auto;
+  height: 60vh;
+  border-radius: 2rem;
 }
 
 .enotes-container h1 {

@@ -15,7 +15,6 @@ const Dashboard = () => {
   };
 
   const menuItems = [
-    { name: "Dashboard", path: "/dashboard", icon: <FaHome /> },
     {
       name: "Past Questions",
       path: "/dashboard/past-questions",
@@ -24,12 +23,7 @@ const Dashboard = () => {
     { name: "E-Notes", path: "/dashboard/e-notes", icon: <FaBook /> },
     { name: "AI ChatBot", path: "/dashboard/chatbot", icon: <FaRobot /> },
     { name: "Account", path: "/dashboard/account", icon: <MdAccountCircle /> },
-    {
-      name: "Log Out",
-      path: "/login",
-      icon: <MdLogout />,
-      onClick: handleLogout,
-    }, // Keep it in place but make it functional
+
   ];
 
   return (
