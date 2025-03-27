@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 import Login from "./Login";
-import Dashboard from "./components/Dashboardd"; // Fixed import
+import DashBoardd from "./components/DashBoardd"; // Fixed import
 import AccountHome from "./components/Account/AccountHome";
 import PastQuestions from "./components/Past-Questions/PastQuestion";
 import Enotes from "./components/E-Notes/Enotes";
@@ -17,7 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="/dashboard" element={<DashBoardd />}>
             <Route path="home" element={<DashboardHome />} />
             <Route path="past-questions" element={<PastQuestions />} />
             <Route path="e-notes" element={<Enotes />} />
