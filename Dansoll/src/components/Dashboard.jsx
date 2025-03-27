@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
-import { Outlet, Link, useLocation } from "react-router-dom";
-import { FaHome, FaChartBar, FaBook, FaFileAlt, FaRobot } from "react-icons/fa"; // Example icons
+import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
+import { FaHome, FaBook, FaFileAlt, FaRobot } from "react-icons/fa";
 import { MdAccountCircle, MdLogout } from "react-icons/md";
 
 const Dashboard = () => {
-  const location = useLocation(); // Get current route for active styling
+  const location = useLocation();
+  const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user"); // Clear user data
+    navigate("/login"); // Redirect to login page
+  };
 
   const menuItems = [
     { name: "Dashboard", path: "/dashboard", icon: <FaHome /> },
@@ -18,29 +24,29 @@ const Dashboard = () => {
     { name: "E-Notes", path: "/dashboard/e-notes", icon: <FaBook /> },
     { name: "AI ChatBot", path: "/dashboard/chatbot", icon: <FaRobot /> },
     { name: "Account", path: "/dashboard/account", icon: <MdAccountCircle /> },
-    { name: "Log Out", path: "/login", icon: <MdLogout /> },
+    {
+      name: "Log Out",
+      path: "/login",
+      icon: <MdLogout />,
+      onClick: handleLogout,
+    }, // Keep it in place but make it functional
   ];
-
-  const toggleSidebar = () => {
-    setCollapsed(!collapsed);
-  };
 
   return (
     <div className="general">
       <div className={`sidebar ${collapsed ? "collapsed" : ""}`}>
         <div className="sidebar-header">
           {!collapsed && <h2 className="sidebar-title">Student Hub</h2>}
-          <button className="collapse-btn" onClick={toggleSidebar}>
-            {collapsed ? ">>" : "<<"}
-          </button>
+
         </div>
         <ul className="sidebar-menu">
           {menuItems.map((item) => (
             <li
-              key={item.path}
+              key={item.name}
               className={`sidebar-item ${
                 location.pathname === item.path ? "active" : ""
               }`}
+              onClick={item.onClick ? item.onClick : null} // Only add onClick for Log Out
             >
               <Link to={item.path}>
                 <div className="icon">{item.icon}</div>

@@ -1,45 +1,60 @@
 .account-container {
-  width: 100vw;
-  padding: var(--spacing-large);
-  background: var(--light-secondary-color);
-  box-shadow: var(--box-shadow);
+  width: 40vw;
+  margin: auto;
+  padding: 2rem;
+  background: linear-gradient(90deg, #1689cd80, #12121280);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 1.5rem;
   text-align: center;
 }
 
 .account-title {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-title);
+  font-size: 2rem;
+  font-weight: bold;
   color: var(--primary-color);
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: 1rem;
 }
 
 .account-icon {
-  font-size: 40px;
-  margin-right: 10px;
-  color: var(--dark-secondary-color);
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.account-details {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff
 }
 
 .account-details p {
-  font-size: var(--font-size-base);
-  color: var(--dark-secondary-color);
   margin: 10px 0;
+  font-weight: 500;
 }
 
+/* Log Out Button */
 .logout-btn {
-  background-color: var(--primary-color);
-  color: var(--light-secondary-color);
-  padding: var(--button-padding);
-  border-radius: var(--button-radius);
+  background: tomato;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
-  margin-top: var(--spacing-medium);
+  margin-top: 20px;
+  transition: 0.3s ease-in-out;
 }
 
 .logout-btn:hover {
-  transform: scale(1.1);
+  background-color: #fff;
+  transform: scale(1.05);
+  color: tomato;
+}
+h1,h2.account-title,svg, .icon{
+  color: #fff;
+  fill: #fff;
 }
