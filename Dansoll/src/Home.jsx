@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        navigate("/dashboard"); // Redirect only if user is logged in
+        navigate("/dashboard/home"); // Redirect only if user is logged in
       }
       setCheckingAuth(false); // Set to false once auth check is complete
     });
