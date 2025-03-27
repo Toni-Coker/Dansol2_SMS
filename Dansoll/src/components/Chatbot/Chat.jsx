@@ -3,7 +3,7 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown"; // Import Markdown Renderer
 import "./Chat.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://student-hub-dhs.vercel.app/";
 
 const Chat = () => {
   const [message, setMessage] = useState("");
