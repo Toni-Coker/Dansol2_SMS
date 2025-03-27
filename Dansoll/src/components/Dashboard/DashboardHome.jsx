@@ -1,4 +1,5 @@
 import React from 'react'
+import './DashboardHome.css'
 
 const DashboardHome = () => {
   return (
