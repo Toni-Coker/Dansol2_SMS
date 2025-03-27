@@ -6,7 +6,7 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = ["http://localhost:5173", "https://dansol-student-hub.vercel.app"];
+const allowedOrigins = ["http://localhost:5173", "https://student-hub-dhs.vercel.app/"];
 app.use(
 cors({
 origin: allowedOrigins,
