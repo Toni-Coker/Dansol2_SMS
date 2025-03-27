@@ -39,7 +39,7 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(userData));
 
       console.log("Google Sign-In Successful", userData);
-      navigate("/dashboard"); // Redirect to Account Page
+      navigate("/dashboard/home"); // Redirect to Account Page
     } catch (err) {
       setError("Google Sign-In Failed");
     }
