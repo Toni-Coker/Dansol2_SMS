@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
-import { FaHome, FaBook, FaFileAlt, FaRobot } from "react-icons/fa";
-import { MdAccountCircle, MdLogout } from "react-icons/md";
+import { FaBook, FaFileAlt, FaRobot } from "react-icons/fa";
+import { MdAccountCircle} from "react-icons/md";
 
-const Dashboard = () => {
+const DashBoardd = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
@@ -55,4 +55,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashBoardd;

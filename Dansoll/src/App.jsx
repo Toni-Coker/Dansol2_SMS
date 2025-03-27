@@ -2,9 +2,8 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Home";
-import Navs from "./Navs";
 import Login from "./Login";
-import Dashboard from "./components/Dashboard";
+import DashBoardd from "./components/DashBoardd";
 import AccountHome from "./components/Account/AccountHome";
 import PastQuestions from "./components/Past-Questions/PastQuestion";
 import Enotes from "./components/E-Notes/Enotes";
@@ -19,7 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="/dashboard" element={<DashBoardd />}>
             <Route path="past-questions" element={<PastQuestions />} />
             <Route path="e-notes" element={<Enotes />} />
             <Route path="chatbot" element={<Chat />} />
