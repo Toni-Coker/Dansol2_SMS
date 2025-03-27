@@ -15,15 +15,11 @@ const App = () => {
 
   return (
     <div className="app-container">
-      {/* Conditionally render Navs except on the home page */}
-      {location.pathname !== "/" && <Navs />} 
-      
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />}>
-            <Route path="results" element={<Dashboard />} />
             <Route path="past-questions" element={<PastQuestions />} />
             <Route path="e-notes" element={<Enotes />} />
             <Route path="chatbot" element={<Chat />} />

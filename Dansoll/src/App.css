@@ -8,7 +8,7 @@
   --muted-text-color: #e7e7e7;
 
   /* 🖋 Font Families */
-  --font-primary: "Inter", sans-serif; /* Main font */
+  --font-primary: "Inter Tight", sans-serif; /* Main font */
   --font-secondary: "Inter Tight", sans-serif; /* Used for headings, emphasis */
 
   /* 🖋 Font Sizes */
@@ -44,6 +44,7 @@
 	font-weight: 400;
 	transition: var(--transition);
 	text-decoration: none;
+  outline: none;
 }
 /* Ensure full viewport height */
 html, body {

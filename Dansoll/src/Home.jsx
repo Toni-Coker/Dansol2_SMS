@@ -3,7 +3,6 @@ import hero from "./assets/hero-image.jpg";
 import results from "./assets/results.jpg";
 import enotes from "./assets/Enotes.webp";
 import ai from "./assets/AI.webp";
-import { Link } from "react-router-dom";
 import "./Home.css";
 import Hero from "./components/Hero";
 
@@ -22,7 +21,6 @@ const Home = () => {
               Dansol High School Student Hub provides seamless access to educational
               materials, performance tracking, and AI-powered assistance.
             </p>
-            <Link to={'/login'} ><button className="login">Get Started</button></Link>
           </div>
         </div>
 

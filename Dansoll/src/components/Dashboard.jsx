@@ -9,12 +9,6 @@ const Dashboard = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   const menuItems = [
-    { name: "Dashboard", path: "/dashboard", icon: <FaHome /> },
-    {
-      name: "Result Analysis",
-      path: "/dashboard/results",
-      icon: <FaChartBar />,
-    },
     {
       name: "Past Questions",
       path: "/dashboard/past-questions",
