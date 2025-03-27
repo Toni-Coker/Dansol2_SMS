@@ -6,7 +6,7 @@ import { signInWithPopup } from "firebase/auth";
 
 const Login = () => {
   const [username, setUsername] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState("");j
   const navigate = useNavigate();
 
   useEffect(() => {
