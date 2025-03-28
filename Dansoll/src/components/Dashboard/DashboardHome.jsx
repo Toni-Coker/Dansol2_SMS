@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaFileAlt, FaBook, FaRobot } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
-import { FaUserCircle } from "react-icons/fa";
 import "./DashboardHome.css";
 
 const DashboardHome = () => {
@@ -15,10 +14,11 @@ const DashboardHome = () => {
       name: "Past Questions",
       path: "/dashboard/past-questions",
       icon: <FaFileAlt />,
+      description: "Review past tests and improve scores."
     },
-    { name: "E-Notes", path: "/dashboard/e-notes", icon: <FaBook /> },
-    { name: "AI ChatBot", path: "/dashboard/chatbot", icon: <FaRobot /> },
-    { name: "Account", path: "/dashboard/account", icon: <MdAccountCircle /> },
+    { name: "E-Notes", path: "/dashboard/e-notes", icon: <FaBook />, description: "Access study materials anytime, anywhere." },
+    { name: "AI ChatBot", path: "/dashboard/chatbot", icon: <FaRobot />, description: "Get instant help with your studies."  },
+    { name: "Account", path: "/dashboard/account", icon: <MdAccountCircle />, description: "View account info" },
   ];
 
   return (
@@ -35,7 +35,7 @@ const DashboardHome = () => {
           <Link key={section.name} to={section.path} className="dashboard-card">
             <div className="icon">{section.icon}</div>
             <h2>{section.name}</h2>
-            <p>Access {section.name.toLowerCase()} easily.</p>
+            <p>{section.description}</p>
           </Link>
         ))}
       </div>
