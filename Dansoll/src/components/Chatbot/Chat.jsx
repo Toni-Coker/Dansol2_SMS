@@ -3,9 +3,11 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown"; // Import Markdown Renderer
 import "./Chat.css";
 
-const API_URL = window.location.hostname === "localhost" 
-  ? "http://localhost:5000" 
-  : "https://student-hub-dhs.vercel.app"; // Change this to your actual Vercel backend URL
+const API_URL =
+  process.env.VITE_BACKEND_URL === "production"
+    ? "https://backend-dansolhub.vercel.app" // Replace with actual backend URL
+    : "http://localhost:5000"; // Keep localhost for development
+
 
 
 
