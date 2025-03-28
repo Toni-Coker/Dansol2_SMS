@@ -3,7 +3,11 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown"; // Import Markdown Renderer
 import "./Chat.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = window.location.hostname === "localhost" 
+  ? "http://localhost:5000" 
+  : "https://student-hub-dhs.vercel.app"; // Change this to your actual Vercel backend URL
+
+
 
 const Chat = () => {
   const [message, setMessage] = useState("");
