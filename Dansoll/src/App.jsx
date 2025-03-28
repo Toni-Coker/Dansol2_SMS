@@ -9,7 +9,7 @@ import PastQuestions from "./components/Past-Questions/PastQuestion";
 import Enotes from "./components/E-Notes/Enotes";
 import Chat from "./components/Chatbot/Chat";
 import DashboardHome from "./components/Dashboard/DashboardHome";
-import ProtectedRoute from "./components/ProtectedRoute"; // Import Protected Route
+import ProtectedRoute from "./ProtectedRoute"; // Import Protected Route
 
 const App = () => {
   return (
