@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import "./AccountHome.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 const AccountHome = () => {
   const navigate = useNavigate();
@@ -11,8 +11,8 @@ const AccountHome = () => {
 
   // Handle Logout
   const handleLogout = () => {
-    localStorage.removeItem("user"); // Clear user data
-    navigate("/login"); // Redirect to login page
+    localStorage.removeItem("user"); // Remove stored user data
+    navigate("/"); // Redirect to homepage
   };
 
   return (
@@ -29,9 +29,9 @@ const AccountHome = () => {
           <strong>Username:</strong> {userData.username || "No Username"}
         </p>
       </div>
-      <button className="logout-btn" onClick={handleLogout}>
-        Log Out
-      </button>
+        <button className="logout-btn" onClick={handleLogout}>
+          Log Out
+        </button>
     </div>
   );
 };
