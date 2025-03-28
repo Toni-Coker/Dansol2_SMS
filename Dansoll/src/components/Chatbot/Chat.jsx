@@ -4,12 +4,9 @@ import ReactMarkdown from "react-markdown"; // Import Markdown Renderer
 import "./Chat.css";
 
 const API_URL =
-  process.env.VITE_BACKEND_URL === "production"
-    ? "https://backend-dansolhub.vercel.app" // Replace with actual backend URL
-    : "http://localhost:5000"; // Keep localhost for development
-
-
-
+  import.meta.env.VITE_BACKEND_URL === "production"
+    ? "https://backend-dansolhub.vercel.app"
+    : "http://localhost:5000";
 
 const Chat = () => {
   const [message, setMessage] = useState("");
